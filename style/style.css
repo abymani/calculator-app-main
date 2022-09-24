@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+:root {
+
+
+    /* ### Theme 1
+
+#### Backgrounds */
+
+--th1-main-background: hsl(222, 26%, 31%);
+--th1-toggle-keypad-background: #232c43;
+--th1-screen-background: hsl(224, 36%, 15%);
+
+/* #### Keys */
+
+--th1-key-background: hsl(225, 21%, 49%);
+--th1-key-shadow: hsl(224, 28%, 35%);
+
+--th1-key-background-toggle: hsl(6, 63%, 50%);
+--th1-shadow-toggle: hsl(6, 70%, 34%);
+
+--th1-key-background2: hsl(30, 25%, 89%);
+--th1-key-shadow2: hsl(28, 16%, 65%);
+
+/* #### Text */
+
+--th1-text-grayish-blue: hsl(221, 14%, 31%);
+--th1-text-White: #ffffff;
+
+/* ### Theme 2
+
+#### Backgrounds */
+
+--th2-main-background: hsl(0, 0%, 90%);
+--th2-toggle-keypad-background: hsl(0, 5%, 81%);
+--th2-screen-background: hsl(0, 0%, 93%);
+
+/* #### Keys */
+
+--th2-key-background: hsl(185, 42%, 37%);
+--th2-key-shadow: hsl(185, 58%, 25%);
+
+--th2-key-background-toggle: hsl(25, 98%, 40%);
+--th2-key-shadow-toggle: hsl(25, 99%, 27%);
+
+--th2-key-background2: hsl(45, 7%, 89%);
+--th2-key-shadow2: hsl(35, 11%, 61%);
+
+/* #### Text */
+
+--th2-text-grayish-yellow: hsl(60, 10%, 19%);
+--th2-text-White: hsl(0, 0, 100%);
+
+/* ### Theme 3 */
+
+/* #### Backgrounds */
+
+--th3-main-background: hsl(268, 75%, 9%);
+--th3-toggle-keypad-background: hsl(268, 71%, 12%);
+--th3-screen-background: hsl(268, 71%, 12%);
+
+/* #### Keys */
+
+--th3-key-background: hsl(281, 89%, 26%);
+--th3-key-shadow: hsl(285, 91%, 52%);
+
+--th3-key-background-toggle: hsl(176, 100%, 44%);
+--th3-key-shadow-toggle: hsl(177, 92%, 70%);
+
+--th3-key-background2: hsl(268, 47%, 21%);
+--th3-key-shadow2: hsl(290, 70%, 36%);
+
+/* #### Text */
+
+--th3-text-Light-yellow: hsl(52, 100%, 62%);
+--th3-text-Very-dark-blue: hsl(198, 20%, 13%);
+--th3-text-White: hsl(0, 0, 100%);
+
+--clr1-main-background:var(--th1-main-background);
+--clr2-toggle-keypad-background:var(--th1-toggle-keypad-background);
+--clr-screen-background:var(--th1-screen-background);
+--clr3-key-background:var(--th1-key-background);
+--clr4-key-shadow:var(--th1-key-shadow);
+--clr5-key-background-toggle:var(--th1-key-background-toggle);
+--clr6-key-shadow-toggle:var(--th1-shadow-toggle);
+--clr7-key-background2:var(--th1-key-background2);
+--clr8-key-shadow2:var(--th1-key-shadow2);
+--clr9-text1:var(--th1-text-grayish-blue);
+--clr10-text2:var(--th1-text-White);
+--clr11-text3:var(--th1-text-White);
+
+
+/* ### Body Copy */
+
+--fs-numbers: 32px;
+--ff-spartan: 'League Spartan', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--ff-spartan);
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--clr1-main-background);
+    height: 100vh;
+}
+main {
+    display: flex;
+    flex-direction:column ;
+    gap: 1rem;
+    margin: 2rem 1rem;
+    min-width: 340px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+    .top span{
+        color: var(--clr10-text2);
+        font-size: 1.8rem;
+    }
+    .top label {
+        color: var(--clr10-text2);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-right: 1rem;
+        margin-left: auto;
+    }
+    input {
+        height: 1rem;
+        margin-top: 5px;
+        aspect-ratio: 1;
+        appearance: none;
+        background-color: var(--clr5-key-background-toggle);
+        border-radius: 50%;
+        opacity: 0;
+      }
+      input:hover {
+        cursor: pointer;
+      }
+    .tri-state-toggle {
+        height: 1.6rem;
+        width: 4rem;
+        display: flex;
+        justify-content: center;
+        background-color:var(--clr2-toggle-keypad-background);
+        border-radius: 50px;
+        position: relative;
+    }
+    .tri-state-toggle::before {
+      content: "123";
+      color: var(--clr10-text2);
+      font-size: 0.8rem;
+      letter-spacing: 0.8rem;
+      position: absolute;
+      top: -1rem;
+      left: 0.5rem;
+      width: 5rem;
+      height: 1rem;
+    }
+    #one {
+        opacity: 1;
+      }
+ 
+.display 
+{
+    background-color: var(--clr-screen-background);
+    padding: 1.5rem;
+    border-radius: 5px;
+    color: var(--clr10-text2);
+    text-align: right;
+    font-size: 2rem;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    background-color: var(--clr2-toggle-keypad-background);
+    padding: 1rem;
+    border-radius: 5px;
+}
+    .btn {
+        color: var(--clr9-text1);
+        padding: 1rem;
+        text-align: center;
+        background-color: var(--clr7-key-background2);
+        box-shadow: 0px 5px 0px 0px var(--clr8-key-shadow2);
+        border: 0;
+        border-radius: 5px;
+        font-size: 2rem;
+    }
+    .btn:hover {
+        filter: brightness(1.3);
+        cursor: pointer;
+    }
+    .clr1 {
+        font-size: 1.5rem;
+        color: var(--th1-text-White);
+        text-transform: uppercase;
+        background-color: var(--clr3-key-background);
+        box-shadow: 0px 5px 0px 0px var(--clr4-key-shadow);
+    }
+    .clr2 {
+        color: var(--clr11-text3);
+        font-size: 1.5rem;
+        background-color: var(--clr5-key-background-toggle);
+        box-shadow: 0px 5px 0px 0px var(--clr6-key-shadow-toggle); 
+    }
+    .reset {
+        grid-column: 1 / span 2;
+    }
+    .equal {
+        grid-column: 3 / span 2;
+    }
+
+@media screen and (min-width:500px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        max-width: 550px;
+        max-height: 725px;
+        
+    }
+    .keypad {
+        gap: 1.5rem;
+    }
+    .btn {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+}

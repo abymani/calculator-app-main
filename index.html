@@ -5,17 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="index.js" defer></script>
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; display: none;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
+  
+  <main>
+    <div class="top">
+      <span>clac</span>
+      <label for="toggle">Theme</label>
+      <div class="tri-state-toggle">
+        <input class="button" type="radio" name="toggle" id="one" />
+        <input class="button" type="radio" name="toggle" id="two" />
+        <input class="button" type="radio" name="toggle" id="three" />
+      </div>
+    </div>
+    <div class="display">
+      0
+    </div>
+    <div class="keypad">
+      <buttton class="btn num">7</buttton>
+      <buttton class="btn num">8</buttton>
+      <buttton class="btn num">9</buttton>
+      <buttton class="btn clr1 del">DEL</buttton>
+      <buttton class="btn num">4</buttton>
+      <buttton class="btn num">5</buttton>
+      <buttton class="btn num">6</buttton>
+      <buttton class="btn op">+</buttton>
+      <buttton class="btn num">1</buttton>
+      <buttton class="btn num">2</buttton>
+      <buttton class="btn num">3</buttton>
+      <buttton class="btn op">-</buttton>
+      <buttton class="btn num">.</buttton>
+      <buttton class="btn num">0</buttton>
+      <buttton class="btn op">/</buttton>
+      <buttton class="btn op">x</buttton>
+      <buttton class="btn clr1 reset">reset</buttton>
+      <buttton class="btn clr2 equal">=</buttton>  
+    </div>
+  </main>
 
   
   <div class="attribution">
